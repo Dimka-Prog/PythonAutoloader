@@ -8,7 +8,6 @@ try:
 except ValueError as error: 
     print('Error: ' + str(error))
 ```
-<br/>
 Функция `loader(projectFolder, file)` принимает два аргумента:<br/>
     `projectFolder` - название папки проекта <br/>
     `file` - файл, до которого нужно получить путь <br/>
