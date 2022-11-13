@@ -1,7 +1,7 @@
 ## Установка
 ## Применение
-Ипортируем библиотеку `from autoloader import loader` <br/>
-Оборачиваем вызов функции в try except <br/>
+1. Ипортируем библиотеку: `from autoloader import loader`
+2. Оборачиваем вызов функции `loader()` в try except <br/>
 ``try: 
     //Function call 
 except ValueError as error: 
