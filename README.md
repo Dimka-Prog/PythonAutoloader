@@ -1,7 +1,7 @@
-## Установка
 ## Применение
-1. Ипортируем библиотеку: `from autoloader import loader`
-2. Оборачиваем вызов функции `loader()` в try except <br/>
+1. Скачиваем файл в папку с проектом (желательно хранить его в корне проекта)
+2. Ипортируем библиотеку: `from PATH.TO.autoloader import loader` (Вместо `PATH` и `TO` указываем папки до файла)
+3. Оборачиваем вызов функции `loader()` в try except <br/>
 ```py 
 try: 
     #Function call 
