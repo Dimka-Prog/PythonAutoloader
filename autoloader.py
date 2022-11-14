@@ -14,7 +14,7 @@ def loader(projectFolder, file):
     homePath += projectFolder
     listSubdirectories = [x[0] for x in os.walk(homePath)]
 
-    for i in range(len(listSubdirectories) - 2):
+    for i in range(len(listSubdirectories)):
         if os.path.isfile(listSubdirectories[i] + file):
             return listSubdirectories[i] + file
 
