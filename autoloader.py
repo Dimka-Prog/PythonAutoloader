@@ -2,12 +2,12 @@ import pathlib
 import os
 
 
-def loader(projectFolder, file):
+def loader(projectFolder, FileOrFolder):
     if projectFolder[0] != '\\':
         projectFolder = '\\' + projectFolder
 
-    if file[0] != '\\':
-        file = '\\' + file
+    if FileOrFolder[0] != '\\':
+        FileOrFolder = '\\' + FileOrFolder
 
     homePath = str(pathlib.Path.cwd())
     homePath = homePath.partition(f'{projectFolder}')[0]
@@ -15,9 +15,9 @@ def loader(projectFolder, file):
     listSubdirectories = [x[0] for x in os.walk(homePath)]
 
     for i in range(len(listSubdirectories)):
-        if os.path.isfile(listSubdirectories[i] + file):
-            return listSubdirectories[i] + file
+        if os.path.isfile(listSubdirectories[i] + FileOrFolder) or os.path.isdir(listSubdirectories[i] + FileOrFolder):
+            return listSubdirectories[i] + FileOrFolder
 
-    file = file.replace('\\', '')
+    FileOrFolder = FileOrFolder.replace('\\', '')
     projectFolder = projectFolder.replace('\\', '')
-    raise ValueError(f"Could not find a {file} file in {projectFolder} folder")
+    raise ValueError(f"Could not find a {FileOrFolder} file in {projectFolder} folder")
