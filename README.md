@@ -9,7 +9,7 @@ except ValueError as error:
     print('Error: ' + str(error))
 ```
 ## Описание
-Функция `loader(projectFolder, file)` принимает два аргумента:<br/>
+Функция `loader(projectFolder, FileOrFolder)` принимает два аргумента:<br/>
 &emsp;`projectFolder` - название папки проекта <br/>
 &emsp;`FileOrFolder` - файл или папка, до которого нужно получить путь <br/>
 
