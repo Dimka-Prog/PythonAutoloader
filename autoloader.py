@@ -15,7 +15,7 @@ def loader(projectFolder, FileOrFolder):
     listSubdirectories = [x[0] for x in os.walk(homePath)]
 
     for i in range(len(listSubdirectories)):
-        if os.path.isfile(listSubdirectories[i] + FileOrFolder) or os.path.isdir(listSubdirectories[i] + FileOrFolder):
+        if os.path.exists(listSubdirectories[i] + FileOrFolder):
             return listSubdirectories[i] + FileOrFolder
 
     FileOrFolder = FileOrFolder.replace('\\', '')
