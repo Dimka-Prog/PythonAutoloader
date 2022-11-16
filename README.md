@@ -8,6 +8,7 @@ try:
 except ValueError as error: 
     print('Error: ' + str(error))
 ```
+# Пример
 ## Описание
 Функция `loader(projectFolder, FileOrFolder)` принимает два аргумента:<br/>
 &emsp;`projectFolder` - название папки проекта <br/>
