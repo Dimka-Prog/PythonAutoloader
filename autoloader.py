@@ -20,4 +20,4 @@ def loader(projectFolder, FileOrFolder):
 
     FileOrFolder = FileOrFolder.replace('\\', '')
     projectFolder = projectFolder.replace('\\', '')
-    raise ValueError(f"Could not find a {FileOrFolder} file in {projectFolder} folder")
+    raise ValueError(f"Could not find a {FileOrFolder} in {projectFolder} folder")
